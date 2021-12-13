@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>泛型 | SKYINCHAM</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/docs/public/favicon.ico">
+    <meta name="description" content="Yesterday is history, tomorrow is a mystery, but today is a gift.">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.836df41d.css" as="style"><link rel="preload" href="/docs/assets/js/app.e6d78ab5.js" as="script"><link rel="preload" href="/docs/assets/js/2.8f7a7e25.js" as="script"><link rel="preload" href="/docs/assets/js/59.33f1e708.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.bb9f37d7.js"><link rel="prefetch" href="/docs/assets/js/11.94b16db7.js"><link rel="prefetch" href="/docs/assets/js/12.e2ea7492.js"><link rel="prefetch" href="/docs/assets/js/13.dd520538.js"><link rel="prefetch" href="/docs/assets/js/14.51e24c3d.js"><link rel="prefetch" href="/docs/assets/js/15.44550bf0.js"><link rel="prefetch" href="/docs/assets/js/16.2c04eb0f.js"><link rel="prefetch" href="/docs/assets/js/17.bdc6f968.js"><link rel="prefetch" href="/docs/assets/js/18.d04cbb9d.js"><link rel="prefetch" href="/docs/assets/js/19.a8213fd4.js"><link rel="prefetch" href="/docs/assets/js/20.4ae14f58.js"><link rel="prefetch" href="/docs/assets/js/21.350765b5.js"><link rel="prefetch" href="/docs/assets/js/22.2cf85e92.js"><link rel="prefetch" href="/docs/assets/js/23.de6ea0ca.js"><link rel="prefetch" href="/docs/assets/js/24.52c7ebf1.js"><link rel="prefetch" href="/docs/assets/js/25.843a0adb.js"><link rel="prefetch" href="/docs/assets/js/26.8b618522.js"><link rel="prefetch" href="/docs/assets/js/27.c0a7d9eb.js"><link rel="prefetch" href="/docs/assets/js/28.88144a01.js"><link rel="prefetch" href="/docs/assets/js/29.0303956b.js"><link rel="prefetch" href="/docs/assets/js/3.a6172880.js"><link rel="prefetch" href="/docs/assets/js/30.74f9cd68.js"><link rel="prefetch" href="/docs/assets/js/31.5ab6ba64.js"><link rel="prefetch" href="/docs/assets/js/32.51ffd103.js"><link rel="prefetch" href="/docs/assets/js/33.8cd919e3.js"><link rel="prefetch" href="/docs/assets/js/34.21f3f445.js"><link rel="prefetch" href="/docs/assets/js/35.3674f33e.js"><link rel="prefetch" href="/docs/assets/js/36.9fd9b728.js"><link rel="prefetch" href="/docs/assets/js/37.659700af.js"><link rel="prefetch" href="/docs/assets/js/38.93eaafa6.js"><link rel="prefetch" href="/docs/assets/js/39.e35fb942.js"><link rel="prefetch" href="/docs/assets/js/4.60071a8a.js"><link rel="prefetch" href="/docs/assets/js/40.0e0bb5d2.js"><link rel="prefetch" href="/docs/assets/js/41.ae9d740e.js"><link rel="prefetch" href="/docs/assets/js/42.21a4d9d1.js"><link rel="prefetch" href="/docs/assets/js/43.7b457d85.js"><link rel="prefetch" href="/docs/assets/js/44.64875694.js"><link rel="prefetch" href="/docs/assets/js/45.10fb000d.js"><link rel="prefetch" href="/docs/assets/js/46.5914ab4d.js"><link rel="prefetch" href="/docs/assets/js/47.428e926f.js"><link rel="prefetch" href="/docs/assets/js/48.0f6db35c.js"><link rel="prefetch" href="/docs/assets/js/49.4f940c22.js"><link rel="prefetch" href="/docs/assets/js/5.1be6bcd0.js"><link rel="prefetch" href="/docs/assets/js/50.4352cef9.js"><link rel="prefetch" href="/docs/assets/js/51.e058003c.js"><link rel="prefetch" href="/docs/assets/js/52.30cbe642.js"><link rel="prefetch" href="/docs/assets/js/53.3226e3fb.js"><link rel="prefetch" href="/docs/assets/js/54.4fd3ddc5.js"><link rel="prefetch" href="/docs/assets/js/55.fae0a5cb.js"><link rel="prefetch" href="/docs/assets/js/56.aa8a1130.js"><link rel="prefetch" href="/docs/assets/js/57.1ee3cbb2.js"><link rel="prefetch" href="/docs/assets/js/58.3b711a0f.js"><link rel="prefetch" href="/docs/assets/js/6.0157cccf.js"><link rel="prefetch" href="/docs/assets/js/60.37f7c9de.js"><link rel="prefetch" href="/docs/assets/js/61.c572ca68.js"><link rel="prefetch" href="/docs/assets/js/62.f902338f.js"><link rel="prefetch" href="/docs/assets/js/63.d829aeda.js"><link rel="prefetch" href="/docs/assets/js/64.1502fce0.js"><link rel="prefetch" href="/docs/assets/js/65.ca32ef39.js"><link rel="prefetch" href="/docs/assets/js/66.00e70826.js"><link rel="prefetch" href="/docs/assets/js/67.fd5b2d23.js"><link rel="prefetch" href="/docs/assets/js/68.68603176.js"><link rel="prefetch" href="/docs/assets/js/69.e4e994a1.js"><link rel="prefetch" href="/docs/assets/js/7.e641499f.js"><link rel="prefetch" href="/docs/assets/js/70.bb199ccb.js"><link rel="prefetch" href="/docs/assets/js/71.721e4a06.js"><link rel="prefetch" href="/docs/assets/js/72.9ea54f1f.js"><link rel="prefetch" href="/docs/assets/js/73.079e8769.js"><link rel="prefetch" href="/docs/assets/js/8.94a28e56.js"><link rel="prefetch" href="/docs/assets/js/9.1f27e43e.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.836df41d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><header></header> <div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">SKYINCHAM</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记篇" class="dropdown-title"><span class="title">笔记篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记篇" class="mobile-dropdown-title"><span class="title">笔记篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          随记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/notes/books/history/" class="nav-link">
+  ├ 历史类
+</a></li><li class="dropdown-subitem"><a href="/docs/views/notes/books/financial/" class="nav-link">
+  ├  金融类
+</a></li><li class="dropdown-subitem"><a href="/docs/views/notes/books/tradition/" class="nav-link">
+  └  传统文学
+</a></li></ul></li><li class="dropdown-item"><h4>
+          随笔
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/notes/viewpoint/" class="nav-link">
+  └ 以史为镜
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术篇" class="dropdown-title"><span class="title">技术篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术篇" class="mobile-dropdown-title"><span class="title">技术篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          新人手册
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/technology/env/" class="nav-link">
+  ├ 常用工具
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/env/环境配置.html" class="nav-link">
+  ├ 基本环境配置
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/env/VSCode+云服务器远程开发配置.html" class="nav-link">
+  └ 远程开发配置
+</a></li></ul></li><li class="dropdown-item"><h4>
+          技术栈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/technology/tech/javascript/" class="nav-link">
+  ├ JavaScript
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/typescript/" class="nav-link router-link-active">
+  ├ Typescript
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/vue/" class="nav-link">
+  ├ Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/react/" class="nav-link">
+  ├ React
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/webGL/" class="nav-link">
+  └ WebGL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          解决方案
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/technology/log/" class="nav-link">
+  └ 日志
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具与应用" class="dropdown-title"><span class="title">应用篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具与应用" class="mobile-dropdown-title"><span class="title">应用篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          工具篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/application/tools/cli/" class="nav-link">
+  ├ CLI（脚手架）
+</a></li><li class="dropdown-subitem"><a href="/docs/views/application/tools/components/" class="nav-link">
+  └ 组件库
+</a></li></ul></li><li class="dropdown-item"><h4>
+          应用篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.s2h5.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ├ Web PC
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://www.s2h5.com/h5/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ├ Web H5
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://www.s2h5.com/mini/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  └小程序
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="图片与视频" class="dropdown-title"><span class="title">摄影篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="图片与视频" class="mobile-dropdown-title"><span class="title">摄影篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          图片篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/photography/image/show/" class="nav-link">
+  ├ 美图欣赏
+</a></li><li class="dropdown-subitem"><a href="/docs/views/photography/image/handle/" class="nav-link">
+  └  图片处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/photography/video/show/" class="nav-link">
+  ├ 视频观赏
+</a></li><li class="dropdown-subitem"><a href="/docs/views/photography/video/handle/" class="nav-link">
+  └ 视频处理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Q&amp;A
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/more/q_a/network/" class="nav-link">
+  ├ 网络类
+</a></li><li class="dropdown-subitem"><a href="/docs/views/more/q_a/serve/" class="nav-link">
+  └ 服务类
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/lenjee" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  └ GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记篇" class="dropdown-title"><span class="title">笔记篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记篇" class="mobile-dropdown-title"><span class="title">笔记篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          随记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/notes/books/history/" class="nav-link">
+  ├ 历史类
+</a></li><li class="dropdown-subitem"><a href="/docs/views/notes/books/financial/" class="nav-link">
+  ├  金融类
+</a></li><li class="dropdown-subitem"><a href="/docs/views/notes/books/tradition/" class="nav-link">
+  └  传统文学
+</a></li></ul></li><li class="dropdown-item"><h4>
+          随笔
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/notes/viewpoint/" class="nav-link">
+  └ 以史为镜
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术篇" class="dropdown-title"><span class="title">技术篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术篇" class="mobile-dropdown-title"><span class="title">技术篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          新人手册
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/technology/env/" class="nav-link">
+  ├ 常用工具
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/env/环境配置.html" class="nav-link">
+  ├ 基本环境配置
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/env/VSCode+云服务器远程开发配置.html" class="nav-link">
+  └ 远程开发配置
+</a></li></ul></li><li class="dropdown-item"><h4>
+          技术栈
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/technology/tech/javascript/" class="nav-link">
+  ├ JavaScript
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/typescript/" class="nav-link router-link-active">
+  ├ Typescript
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/vue/" class="nav-link">
+  ├ Vue
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/react/" class="nav-link">
+  ├ React
+</a></li><li class="dropdown-subitem"><a href="/docs/views/technology/tech/webGL/" class="nav-link">
+  └ WebGL
+</a></li></ul></li><li class="dropdown-item"><h4>
+          解决方案
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/technology/log/" class="nav-link">
+  └ 日志
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具与应用" class="dropdown-title"><span class="title">应用篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具与应用" class="mobile-dropdown-title"><span class="title">应用篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          工具篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/application/tools/cli/" class="nav-link">
+  ├ CLI（脚手架）
+</a></li><li class="dropdown-subitem"><a href="/docs/views/application/tools/components/" class="nav-link">
+  └ 组件库
+</a></li></ul></li><li class="dropdown-item"><h4>
+          应用篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="http://www.s2h5.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ├ Web PC
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://www.s2h5.com/h5/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ├ Web H5
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="http://www.s2h5.com/mini/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  └小程序
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="图片与视频" class="dropdown-title"><span class="title">摄影篇</span> <span class="arrow down"></span></button> <button type="button" aria-label="图片与视频" class="mobile-dropdown-title"><span class="title">摄影篇</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          图片篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/photography/image/show/" class="nav-link">
+  ├ 美图欣赏
+</a></li><li class="dropdown-subitem"><a href="/docs/views/photography/image/handle/" class="nav-link">
+  └  图片处理
+</a></li></ul></li><li class="dropdown-item"><h4>
+          视频篇
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/photography/video/show/" class="nav-link">
+  ├ 视频观赏
+</a></li><li class="dropdown-subitem"><a href="/docs/views/photography/video/handle/" class="nav-link">
+  └ 视频处理
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="了解更多" class="dropdown-title"><span class="title">了解更多</span> <span class="arrow down"></span></button> <button type="button" aria-label="了解更多" class="mobile-dropdown-title"><span class="title">了解更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Q&amp;A
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/views/more/q_a/network/" class="nav-link">
+  ├ 网络类
+</a></li><li class="dropdown-subitem"><a href="/docs/views/more/q_a/serve/" class="nav-link">
+  └ 服务类
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/lenjee" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  └ GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Typescript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/views/technology/tech/typescript/" aria-current="page" class="sidebar-link">-- 操作指南 --</a></li><li><a href="/docs/views/technology/tech/typescript/sjlx.html" class="sidebar-link">数据类型</a></li><li><a href="/docs/views/technology/tech/typescript/lxtd.html" class="sidebar-link">类型推断</a></li><li><a href="/docs/views/technology/tech/typescript/lhlx.html" class="sidebar-link">联合类型</a></li><li><a href="/docs/views/technology/tech/typescript/jk.html" class="sidebar-link">对象的类型-接口</a></li><li><a href="/docs/views/technology/tech/typescript/sz.html" class="sidebar-link">数组的类型</a></li><li><a href="/docs/views/technology/tech/typescript/hs.html" class="sidebar-link">函数的类型</a></li><li><a href="/docs/views/technology/tech/typescript/lxdy.html" class="sidebar-link">类型断言</a></li><li><a href="/docs/views/technology/tech/typescript/lxbm.html" class="sidebar-link">类型别名</a></li><li><a href="/docs/views/technology/tech/typescript/smwj.html" class="sidebar-link">声明文件</a></li><li><a href="/docs/views/technology/tech/typescript/mj.html" class="sidebar-link">枚举</a></li><li><a href="/docs/views/technology/tech/typescript/cls.html" class="sidebar-link">类</a></li><li><a href="/docs/views/technology/tech/typescript/lyjk.html" class="sidebar-link">类与接口</a></li><li><a href="/docs/views/technology/tech/typescript/fx.html" aria-current="page" class="active sidebar-link">泛型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/views/technology/tech/typescript/fx.html#多个类型参数" class="sidebar-link">多个类型参数</a></li><li class="sidebar-sub-header"><a href="/docs/views/technology/tech/typescript/fx.html#泛型约束" class="sidebar-link">泛型约束</a></li><li class="sidebar-sub-header"><a href="/docs/views/technology/tech/typescript/fx.html#泛型类" class="sidebar-link">泛型类</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="泛型"><a href="#泛型" class="header-anchor">#</a> 泛型</h1> <p>泛型（Generics）是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性。</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// T 用来指代任意输入的类型</span>
+<span class="token keyword">function</span> <span class="token generic-function"><span class="token function">createArray</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>length<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Array</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> result<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        result<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token generic-function"><span class="token function">createArray</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'x'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ['x', 'x', 'x']</span>
+</code></pre></div><h2 id="多个类型参数"><a href="#多个类型参数" class="header-anchor">#</a> 多个类型参数</h2> <p>定义泛型的时候，可以一次定义多个类型参数：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 定义了一个 swap 函数，用来交换输入的元组。</span>
+<span class="token keyword">function</span> <span class="token generic-function"><span class="token function">swap</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token punctuation">,</span> <span class="token constant">U</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>tuple<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">T</span><span class="token punctuation">,</span> <span class="token constant">U</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">U</span><span class="token punctuation">,</span> <span class="token constant">T</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>tuple<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> tuple<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">swap</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'seven'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ['seven', 7]</span>
+</code></pre></div><h2 id="泛型约束"><a href="#泛型约束" class="header-anchor">#</a> 泛型约束</h2> <p>在函数内部使用泛型变量的时候，由于事先不知道它是哪种类型，所以不能随意的操作它的属性或方法：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Lengthwise</span> <span class="token punctuation">{</span>
+    length<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token generic-function"><span class="token function">loggingIdentity</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> Lengthwise<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>arg<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token constant">T</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arg<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> arg<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="泛型类"><a href="#泛型类" class="header-anchor">#</a> 泛型类</h2> <p>与泛型接口类似，泛型也可以用于类的类型定义中：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">GenericNumber<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+    zeroValue<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+    <span class="token function-variable function">add</span><span class="token operator">:</span> <span class="token punctuation">(</span>x<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span> y<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token constant">T</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> myGenericNumber <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GenericNumber<span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myGenericNumber<span class="token punctuation">.</span>zeroValue <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+myGenericNumber<span class="token punctuation">.</span><span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/views/technology/tech/typescript/lyjk.html" class="prev">
+        类与接口
+      </a></span> <!----></p></div> </main></div> <footer class="footer">
+    Copyright © 2020 - 2021 @张金城 版权所有
+    <br> <a class="footer_a">粤ICP备19124094号</a></footer></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.e6d78ab5.js" defer></script><script src="/docs/assets/js/2.8f7a7e25.js" defer></script><script src="/docs/assets/js/59.33f1e708.js" defer></script>
+  </body>
+</html>
